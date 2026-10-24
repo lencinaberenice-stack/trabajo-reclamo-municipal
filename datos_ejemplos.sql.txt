@@ -1,0 +1,5 @@
+INSERT INTO categorias (nombre) VALUES ('Luminaria rota');
+INSERT INTO ciudadanos (dni, nombre, apellido, telefono)
+VALUES ('32145678','Lucía','Pérez','11556677');
+INSERT INTO reclamos (id_ciudadano, id_categoria, ubicacion, fecha_ingreso, estado)
+VALUES (1,1,'Av. Mitre 1450','2026‑10‑22','pendiente');

@@ -1,0 +1,41 @@
+CREATE DATABASE reclamos_muni;
+
+CREATE TABLE ciudadanos (
+  id_ciudadano INT PRIMARY KEY AUTO_INCREMENT,
+  dni VARCHAR(12) UNIQUE NOT NULL,
+  nombre VARCHAR(40) NOT NULL,
+  apellido VARCHAR(40) NOT NULL,
+  telefono VARCHAR(15)
+);
+
+CREATE TABLE empleados (
+  id_empleado INT PRIMARY KEY AUTO_INCREMENT,
+  legajo VARCHAR(10) UNIQUE NOT NULL,
+  nombre VARCHAR(40) NOT NULL,
+  apellido VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE categorias (
+  id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+  nombre VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE reclamos (
+  id_reclamo INT PRIMARY KEY AUTO_INCREMENT,
+  id_ciudadano INT,
+  id_categoria INT,
+  ubicacion VARCHAR(100),
+  fecha_ingreso DATE,
+  estado VARCHAR(20),
+  FOREIGN KEY (id_ciudadano) REFERENCES ciudadanos(id_ciudadano),
+  FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);
+
+CREATE TABLE intervenciones (
+  id_intervencion INT PRIMARY KEY AUTO_INCREMENT,
+  id_reclamo INT,
+  id_empleado INT,
+  tarea VARCHAR(120),
+  FOREIGN KEY (id_reclamo) REFERENCES reclamos(id_reclamo),
+  FOREIGN KEY (id_empleado) REFERENCES empleados(id_empleado)
+);
