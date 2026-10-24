@@ -1,0 +1,6 @@
+La municipalidad tenía problema porque la gente mandaba los reclamos por teléfono, correo o iba hasta ahí, y se les perdían o repetían los datos.
+Así que pensé hacer dos bases de datos que trabajen juntas:
+Una base relacional con SQL, para guardar las cosas que son siempre iguales: quién hace el reclamo, de qué es, en qué estado está, qué empleado lo atiende y cuándo se hizo. Con esto después pueden sacar cuentas de cuántos reclamos hay de cada cosa.
+La otra es la base documental para Firebase, ahí van las cosas que cambian según el problema: por ejemplo si es una luz rota, el número de poste; si es pérdida de agua, qué cañería se rompió, además de fotos y comentarios de los empleados.
+Las dos se unen por el número único de cada reclamo, así cuando buscamos un caso salen todos los datos juntos.
+Aclaración: no pude entrar a Firebase para armarlo en la página, así que entrego cómo quedarían los archivos que irían ahí.
