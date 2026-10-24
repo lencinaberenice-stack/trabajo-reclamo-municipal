@@ -1,0 +1,8 @@
+[
+  {
+    "id_reclamo": 1,
+    "detalles": "Poste número M‑045, cable suelto",
+    "foto": "foto_luz1.jpg",
+    "comentario_empleado": "Hay que revisar el cable"
+  }
+]

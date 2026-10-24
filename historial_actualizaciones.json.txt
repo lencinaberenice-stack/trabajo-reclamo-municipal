@@ -1,0 +1,8 @@
+[
+  {
+    "id_reclamo": 1,
+    "cambios": [
+      {"fecha":"22‑10‑2026", "estado":"pasó de pendiente a en proceso", "quien_lo_hizo":"empleado de vías"}
+    ]
+  }
+]
